@@ -1,0 +1,18 @@
+spring:
+  jpa:
+    open-in-view: false
+  cache:
+    type: jcache
+    jcache:
+      provider: org.ehcache.jsr107.EhcacheCachingProvider
+      config: classpath:ehcache3.xml
+management:
+  endpoint.caches.enabled: true
+  endpoints.web.exposure.include: caches, metrics
+logging:
+  level:
+    root: warn
+    net.brunomendola.demo.springbootcache: debug
+    org.hibernate.SQL: debug
+    org.ehcache: debug
+    org.springframework.cache: trace
