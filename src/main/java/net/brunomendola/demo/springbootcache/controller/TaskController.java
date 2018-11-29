@@ -2,6 +2,7 @@ package net.brunomendola.demo.springbootcache.controller;
 
 import net.brunomendola.demo.springbootcache.dto.TaskDto;
 import net.brunomendola.demo.springbootcache.service.TaskService;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,7 +18,7 @@ public class TaskController {
     this.taskService = taskService;
   }
 
-  @RequestMapping("/assignee/{employeeName}")
+  @GetMapping("/assignee/{employeeName}")
   public Collection<TaskDto> getByAssignee(@PathVariable String employeeName) {
     return taskService.getByAssigneeName(employeeName);
   }
