@@ -1,0 +1,1 @@
+# Spring Boot Cache with Ehcache 3 sample [![Build Status](https://travis-ci.org/brunomendola/spring-boot-cache-ehcache-sample.svg?branch=master)](https://travis-ci.org/brunomendola/spring-boot-cache-ehcache-sample)
